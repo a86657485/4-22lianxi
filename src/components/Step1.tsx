@@ -13,7 +13,7 @@ export function Step1({ onComplete }: { onComplete: () => void }) {
     '2024': ''
   });
 
-  const isDataComplete = inputs['2022'].trim() === '1766.18' && inputs['2023'].trim() === '1779.01' && inputs['2024'].trim() === '1798.95';
+  const isDataComplete = inputs['2022'].trim() !== '' && inputs['2023'].trim() !== '' && inputs['2024'].trim() !== '';
 
   const handleNodeClick = (type: 'A' | 'B' | 'C') => {
     if (type === 'A') {
@@ -267,8 +267,8 @@ export function Step1({ onComplete }: { onComplete: () => void }) {
             </div>
 
             <div className="flex justify-end pt-4">
-              <Button variant="glow" onClick={onComplete} disabled={!isDataComplete}>
-                {isDataComplete ? '数据校验成功，进入工作台' : '请先补全并校验数据'}
+              <Button variant="glow" onClick={onComplete}>
+                进入工作台 (下一步)
               </Button>
             </div>
           </motion.div>

@@ -8,7 +8,7 @@ import { Step5 } from './components/Step5';
 
 export default function App() {
   const [currentStep, setCurrentStep] = useState(1);
-  const [maxReachedStep, setMaxReachedStep] = useState(1);
+  const [maxReachedStep, setMaxReachedStep] = useState(5); // 解锁所有步骤
   
   // State to store analyses
   const [step2Analysis, setStep2Analysis] = useState('');
